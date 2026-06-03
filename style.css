@@ -1,0 +1,307 @@
+/* =========================================
+   Task 1: Global Styles & Color Scheme 
+   ========================================= */
+   :root {
+    --primary-color: #4f46e5;
+    --secondary-color: #4338ca;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-white: #ffffff;
+    --bg-gray: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Typography & Section Spacing */
+.section {
+    padding: 5rem 10%; /* Spacing between sections */
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-gray);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.section-text {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: var(--text-light);
+}
+
+/* =========================================
+   Task 3 & 4: Flexbox Layouts (Navbar) 
+   ========================================= */
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease; /* Hover effect */
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   Task 2: Attractive Hero Section 
+   ========================================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 10%;
+    background-color: var(--bg-white);
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+}
+
+/* Task 1: Buttons & Hover Effects */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px); /* Hover effect */
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* =========================================
+   Task 3: Flexbox for Skills & Projects 
+   ========================================= */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.skill-box {
+    background-color: var(--bg-white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-gray);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.project-card p {
+    color: var(--text-light);
+}
+
+footer {
+    background-color: var(--text-dark);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* =========================================
+   Task 5: Make the Website Responsive 
+   ========================================= */
+
+/* Desktop Optimization: The default styles above naturally cover Desktop (min-width: 1025px) */
+
+/* Optimize for Tablet (Max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .section, .navbar, .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Optimize for Mobile (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Stack Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 5%;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Stack Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column; /* Buttons stack on very small screens */
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Flex direction for project cards */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
